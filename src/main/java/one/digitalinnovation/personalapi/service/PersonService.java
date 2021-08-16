@@ -55,7 +55,8 @@ public class PersonService {
     }
 
     public void deleteById(Long id) throws PersonNotFoundException {
-        verifyIfExists(id);
+        Person person = verifyIfExists(id);
+
         personRepository.deleteById(id);
     }
 
